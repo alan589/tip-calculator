@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Links
 
-- Project link: (https://your-live-site-url.com)
+- Project link: (https://alan589.github.io/tip-calculator/)
 
 ## My process
 
