@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+    --dark-cyan: hsl(183, 100%, 15%);
+    --light-cyan: hsl(185, 41%, 84%);
+    --strong-cyan: hsl(172, 67%, 45%);
+    --grayish-cyan: hsl(183, 100%, 20%);
+    --text-white-color: hsl(0, 0%, 100%);
+    --grayish-cyan-text: hsl(184, 14%, 56%);
+    --bg-input: hsl(189, 41%, 95%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Space Mono', monospace;
+    background: var(--light-cyan);
+}
+
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 1.6rem;
+    max-width: 1000px;
+    background: #fff;
+    margin: 0 auto;
+    padding: 4.5rem;
+    border-radius: 15px;
+}
+
+#logo-container {
+    text-align: center;
+    padding-bottom:  2rem;
+}
+
+/* INPUT CONTAINER */
+#container-input {
+    flex-basis: 47%;
+}
+
+#container-input label {
+    display: block;
+}
+
+#money, #number-people {
+    width: 100%;
+    text-align: right;
+}
+
+#btn-custom {
+    text-align: right;
+}
+
+#money, #number-people, #btn-custom {
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    border: none;
+    background: var(--bg-input);
+    color: var(--dark-cyan);
+    font-size: 2.4rem;
+    cursor: pointer;
+}
+
+#btn-custom:focus, #money:focus, #number-people:focus {
+    cursor: text;
+}
+
+#money::placeholder, #number-people::placeholder, #btn-custom::placeholder {
+    text-align: right;
+    color: var(--grayish-cyan-text);
+}
+
+#btn-custom::placeholder {
+    text-align: center;
+}
+
+.container-input-logo {
+    display: flex;
+    border-radius: 5px;
+    background: var(--bg-input);
+    align-items : center;
+    padding: 1rem 2.3rem;
+}
+
+
+.tip-btn-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;
+}
+
+#container-input > div:nth-child(2) {
+    margin: 40px 0;
+}
+#btn-custom {
+    width: 100%;
+}
+
+.tip-btn-container button {
+    background: var(--dark-cyan);
+    color: var(--text-white-color);
+    font-size: 2.4rem;
+    cursor: pointer;
+    border: none;
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+}
+
+.tip-btn-container button:hover {
+    background-color: var(--light-cyan);
+    color: var(--dark-cyan);
+}
+
+.tip-btn-container button, #btn-custom {
+    border-radius: 5px;
+    padding: 1rem; 
+}
+
+#btn-custom:hover, .container-input-logo:hover {
+    border: 3px solid var(--strong-cyan);
+    padding: 0.7rem;
+}
+
+.container-input-logo:hover {
+    padding: 0.7rem 2rem;
+}
+
+/* OUTPUT CONTAINER */
+#container-output {
+    flex-basis: 47%;
+    padding: 4rem;
+    border-radius: 15px;
+    background: var(--dark-cyan);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+#container-output > div > div  {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.money-text{
+    color: var(--text-white-color);
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.person-text {
+    color: var(--grayish-cyan-text);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.money-result{
+    color: var(--strong-cyan);
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+
+#reset-btn {
+    width: 100%;
+    text-transform: uppercase;
+    padding: 1rem;
+    border: none;
+    border-radius: 3px;
+    background: var(--grayish-cyan);
+    color: var(--dark-cyan);
+    font-weight: 700;
+    font-size: 2rem;
+}
+#reset-btn.reset-active{
+    cursor: pointer;
+    background: var(--strong-cyan);
+    color: var(--dark-cyan);
+}
+
+
+#reset-btn.reset-active:hover {
+    background-color: var(--light-cyan);
+}
+
+.tip-btn-container .button-active, #btn-custom.button-active {
+    background: var(--strong-cyan);
+    color: var(--dark-cyan);
+}
+
+.container-input-logo.cant-be-zero{
+    border: 3px solid orangered;
+    padding: 0.7rem 2rem;
+    position: relative;
+}
+
+.container-input-logo.cant-be-zero::after {
+    content: "Can't be zero";
+    color: orangered;
+    font-weight: 700;
+    position: absolute;
+    right: 0;
+    top: -28px;
+}
+
+
+.attribution {
+position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    bottom: 0;
+}
